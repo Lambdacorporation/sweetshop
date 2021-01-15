@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameBuildShopLevel2</title>
+        <link rel="stylesheet" href="shop.css">
+    </head>
+    <body id = shop>
+        <div id = shop>
+            <h1 id = "header">Halloween sweet shop</h1>
+            <h1 id="header">Level 2</h1>
+            <h1 id="header">Austria</h1>
+            <p>Don't read it, before you buy some advertisement!!!</p>
+            <p>Congratulations to pass level 1. In this level you have to sell your sweets. But every 10 seconds you must pay money for ads, electricity, water, workers and taxes. And that isn't all. Electricity and water are becoming more expensive every 10 seconds. Build the branches in every city in your country. You have to expand to another countries. Have a nice day:).</p>
+            <!--Work-->
+            <label>Your money:</label>
+            <var id = userMoney>0</var><label> €</label><br>
+            <label>Total production (€/s):</label>
+            <var id = totalProduction>0</var><br>
+            <button id = "work" onclick="work()">Sell sweet</button><br>
+            <label>Expansion status:</label>
+            <var id = expandStatus>Is not open.</var><br>
+            <button id = "expandCompany" onclick="expandCompany()">Expand company</button>
+            <label>Price:</label>
+            <var id = expandCost>100000000 €</var><br>
+            <!--Advertisement-->
+            <h3>Advertisement for workers:</h3>
+            <label>Number of advertisements:</label>
+            <var id = numAd>0</var><br>
+            <button id = "buyAd" onclick="buyAd()">Buy advertisement</button>
+            <label>Price:</label>
+            <var id = adCost>10</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = adProduction>0</var><br>
+            <!--Worker-->
+            <h3>Worker:</h3>
+            <label>Number of workers:</label>
+            <var id = numWorker>0</var><br>
+            <button id = "buyWorker" onclick="buyWorker()">Employ worker</button>
+            <label>Price:</label>
+            <var id = workerCost>100</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = workerProduction>0</var><br>
+            <!--Branches-->
+            <h3>Branches:</h3>
+            <label>Number of branches:</label>
+            <var id = numBranches>0</var><br>
+            <label>Number of branches in Dornbirn:</label>
+            <var id = numDornbirn>0</var><br>
+            <button id = "buyDornbirn" onclick="buyDornbirn()">Buy branch in Dornbirn</button>
+            <label>Price:</label>
+            <var id = dornbirnCost>1000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = dornbirnProduction>0</var><br>
+            <label>Number of branches in Villach:</label>
+            <var id = numVillach>0</var><br>
+            <button id = "buyVillach" onclick="buyVillach()">Buy branch in Villach</button>
+            <label>Price:</label>
+            <var id = villachCost>5000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = villachProduction>0</var><br>
+            <label>Number of branches in Klagenfurt:</label>
+            <var id = numKlagenfurt>0</var><br>
+            <button id = "buyKlagenfurt" onclick="buyKlagenfurt()">Buy branch in Klagenfurt</button>
+            <label>Price:</label>
+            <var id = klagenfurtCost>10000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = klagenfurtProduction>0</var><br>
+            <label>Number of branches in Innsbruck:</label>
+            <var id = numInnsbruck>0</var><br>
+            <button id = "buyInnsbruck" onclick="buyInnsbruck()">Buy branch in Innsbruck</button>
+            <label>Price:</label>
+            <var id = innsbruckCost>50000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = innsbruckProduction>0</var><br>
+            <label>Number of branches in Salzburg:</label>
+            <var id = numSalzburg>0</var><br>
+            <button id = "buySalzburg" onclick="buySalzburg()">Buy branch in Salzburg</button>
+            <label>Price:</label>
+            <var id = salzburgCost>100000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = salzburgProduction>0</var><br>
+            <label>Number of branches in Linz:</label>
+            <var id = numLinz>0</var><br>
+            <button id = "buyLinz" onclick="buyLinz()">Buy branch in Linz</button>
+            <label>Price:</label>
+            <var id = linzCost>500000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = linzProduction>0</var><br>
+            <label>Number of branches in Graz:</label>
+            <var id = numGraz>0</var><br>
+            <button id = "buyGraz" onclick="buyGraz()">Buy branch in Graz</button>
+            <label>Price:</label>
+            <var id = grazCost>1000000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = grazProduction>0</var><br>
+            <label>Number of branches in Wien:</label>
+            <var id = numWien>0</var><br>
+            <button id = "buyWien" onclick="buyWien()">Buy branch in Wien</button>
+            <label>Price:</label>
+            <var id = wienCost>5000000</var><label> €</label><br>
+            <label>Produce (€/s):</label>
+            <var id = wienProduction>0</var><br>
+            <!--Shop Construction-->
+            <h3>Shop construction:</h3>
+            <label>Necessary parts:</label><br>
+            <var id = passports></var>
+            <var id = website></var>
+            <var id = siteselection></var>
+            <var id = documents></var>
+            <var id = workpermit></var>
+            <var id = buildingPermit></var>
+            <var id = land></var>
+            <var id = transport></var>
+            <button id = "buyPassports" onclick="buyPassports()">Buy passports</button>
+            <label>Price:</label>
+            <var id = "passportsPrice">10000000 €</var><br>
+            <button id = "buyWebsite" onclick="buyWebsite()">Buy website</button>
+            <label>Price:</label>
+            <var id = "websitePrice">15000000 €</var><br>
+            <button id = "buySiteselection" onclick="buySiteselection()">Buy site selection</button>
+            <label>Price:</label>
+            <var id = "siteselectionPrice">20000000 €</var><br>
+            <button id = "buyDocuments" onclick="buyDocuments()">Buy documents</button>
+            <label>Price:</label>
+            <var id = "documentsPrice">25000000 €</var><br>
+            <button id = "buyWorkPermit" onclick="buyWorkPermit()">Buy work permit</button>
+            <label>Price:</label>
+            <var id = "workpermitPrice">30000000 €</var><br>
+            <button id = "buyBuildingPermit" onclick="buyBuildingPermit()">Buy building permit</button>
+            <label>Price:</label>
+            <var id = "buildingPermitPrice">35000000 €</var><br>
+            <button id = "buyLand" onclick="buyLand()">Buy land</button>
+            <label>Price:</label>
+            <var id = "landPrice">40000000 €</var><br>
+            <button id = "buyTransport" onclick="buyTransport()">Buy transport</button>
+            <label>Price:</label>
+            <var id = "transportPrice">45000000 €</var><br><br><br><br>
+            <div class="pumpkin">
+            <div class="face">
+                <div class="eyes">
+                 <span></span><span></span>
+                </div>
+                <div class="mouth"></div>
+                </div>
+            
+                <div class="hands">
+                  <span></span><span></span>
+                </div>
+            </div>
+            <button onclick="reset()">Reset current level</button>
+            <script src="shop_open.js"></script>
+            <footer>
+                <p>LAMBDA corporation, Copyright &copy; 2020</p>
+            </footer>
+        </div>
+    </body>
+</html>

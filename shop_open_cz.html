@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameBuildShopLevel3</title>
+        <link rel="stylesheet" href="shop.css">
+    </head>
+    <body id = shop>
+        <div id = shop>
+            <h1 id = "header">Halloween sweet shop</h1>
+            <h1 id="header">Level 3</h1>
+            <h1 id="header">Czechia</h1>
+            <p>Don't read it, before you buy some advertisement!!!</p>
+            <p>Congratulations to pass level 2. Welcome to Czech Republic. You have to pay more money for taxes and for workers. Your branches won't give you too much money. Have a nice day:).</p>
+            <!--Work-->
+            <label>Your money:</label>
+            <var id = userMoney>0</var><label> Kč</label><br>
+            <label>Total production (Kč/s):</label>
+            <var id = totalProduction>0</var><br>
+            <button id = "work" onclick="work()">Sell sweet</button><br>
+            <label>Expansion status:</label>
+            <var id = expandStatus>Is not open.</var><br>
+            <button id = "expandCompany" onclick="expandCompany()">Expand company</button>
+            <label>Price:</label>
+            <var id = expandCost>500000000 Kč</var><br>
+            <!--Advertisement-->
+            <h3>Advertisement for workers:</h3>
+            <label>Number of advertisements:</label>
+            <var id = numAd>0</var><br>
+            <button id = "buyAd" onclick="buyAd()">Buy advertisement</button>
+            <label>Price:</label>
+            <var id = adCost>10</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = adProduction>0</var><br>
+            <!--Worker-->
+            <h3>Worker:</h3>
+            <label>Number of workers:</label>
+            <var id = numWorker>0</var><br>
+            <button id = "buyWorker" onclick="buyWorker()">Employ worker</button>
+            <label>Price:</label>
+            <var id = workerCost>100</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = workerProduction>0</var><br>
+            <!--Branches-->
+            <h3>Branches:</h3>
+            <label>Number of branches in Trebic:</label>
+            <var id = numTrebic>0</var><br>
+            <button id = "buyTrebic" onclick="buyTrebic()">Buy branch in Trebic</button>
+            <label>Price:</label>
+            <var id = TrebicCost>2000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = TrebicProduction>0</var><br>
+            <label>Number of branches in Ceske Budejovice:</label>
+            <var id = numCeskeBudejovice>0</var><br>
+            <button id = "buyCeskeBudejovice" onclick="buyCeskeBudejovice()">Buy branch in Ceske Budejovice</button>
+            <label>Price:</label>
+            <var id = CeskeBudejoviceCost>10000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = CeskeBudejoviceProduction>0</var><br>
+            <label>Number of branches in Olomouc:</label>
+            <var id = numOlomouc>0</var><br>
+            <button id = "buyOlomouc" onclick="buyOlomouc()">Buy branch in Olomouc</button>
+            <label>Price:</label>
+            <var id = OlomoucCost>20000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = OlomoucProduction>0</var><br>
+            <label>Number of branches in Liberec:</label>
+            <var id = numLiberec>0</var><br>
+            <button id = "buyLiberec" onclick="buyLiberec()">Buy branch in Liberec</button>
+            <label>Price:</label>
+            <var id = LiberecCost>100000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = LiberecProduction>0</var><br>
+            <label>Number of branches in Plzen:</label>
+            <var id = numPlzen>0</var><br>
+            <button id = "buyPlzen" onclick="buyPlzen()">Buy branch in Plzen</button>
+            <label>Price:</label>
+            <var id = PlzenCost>200000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = PlzenProduction>0</var><br>
+            <label>Number of branches in Ostrava:</label>
+            <var id = numOstrava>0</var><br>
+            <button id = "buyOstrava" onclick="buyOstrava()">Buy branch in Ostrava</button>
+            <label>Price:</label>
+            <var id = OstravaCost>1000000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = OstravaProduction>0</var><br>
+            <label>Number of branches in Brno:</label>
+            <var id = numBrno>0</var><br>
+            <button id = "buyBrno" onclick="buyBrno()">Buy branch in Brno</button>
+            <label>Price:</label>
+            <var id = BrnoCost>2000000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = BrnoProduction>0</var><br>
+            <label>Number of branches in Prague:</label>
+            <var id = numPrague>0</var><br>
+            <button id = "buyPrague" onclick="buyPrague()">Buy branch in Prague</button>
+            <label>Price:</label>
+            <var id = PragueCost>10000000</var><label> Kč</label><br>
+            <label>Produce (Kč/s):</label>
+            <var id = PragueProduction>0</var><br>
+            <!--Shop Construction-->
+            <h3>Expansion:</h3>
+            <label>Necessary parts:</label><br>
+            <var id = passports></var>
+            <var id = website></var>
+            <var id = siteselection></var>
+            <var id = documents></var>
+            <var id = workpermit></var>
+            <var id = buildingPermit></var>
+            <var id = land></var>
+            <var id = transport></var>
+            <button id = "buyPassports" onclick="buyPassports()">Buy passports</button>
+            <label>Price:</label>
+            <var id = "passportsPrice">100000000 Kč</var><br>
+            <button id = "buyWebsite" onclick="buyWebsite()">Buy website</button>
+            <label>Price:</label>
+            <var id = "websitePrice">150000000 Kč</var><br>
+            <button id = "buySiteselection" onclick="buySiteselection()">Buy site selection</button>
+            <label>Price:</label>
+            <var id = "siteselectionPrice">200000000 Kč</var><br>
+            <button id = "buyDocuments" onclick="buyDocuments()">Buy documents</button>
+            <label>Price:</label>
+            <var id = "documentsPrice">250000000 Kč</var><br>
+            <button id = "buyWorkPermit" onclick="buyWorkPermit()">Buy work permit</button>
+            <label>Price:</label>
+            <var id = "workpermitPrice">300000000 Kč</var><br>
+            <button id = "buyBuildingPermit" onclick="buyBuildingPermit()">Buy building permit</button>
+            <label>Price:</label>
+            <var id = "buildingPermitPrice">350000000 Kč</var><br>
+            <button id = "buyLand" onclick="buyLand()">Buy land</button>
+            <label>Price:</label>
+            <var id = "landPrice">400000000 Kč</var><br>
+            <button id = "buyTransport" onclick="buyTransport()">Buy transport</button>
+            <label>Price:</label>
+            <var id = "transportPrice">450000000 Kč</var><br><br><br><br>
+            <div class="pumpkin">
+            <div class="face">
+                <div class="eyes">
+                 <span></span><span></span>
+                </div>
+                <div class="mouth"></div>
+                </div>
+            
+                <div class="hands">
+                  <span></span><span></span>
+                </div>
+            </div>
+            <button onclick="reset()">Reset current level</button>
+            <script src="shop_open_cz.js"></script>
+            <footer>
+                <p>LAMBDA corporation, Copyright &copy; 2020</p>
+            </footer>
+        </div>
+    </body>
+</html>

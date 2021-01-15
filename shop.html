@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameBuildShop</title>
+        <link rel="stylesheet" href="shop.css">
+    </head>
+    <body id = shop>
+        <div id = shop>
+            <h1 id = "header">Halloween sweet shop</h1>
+            <h1 id="header">Level 1</h1>
+            <p id = "instructions">Instructions: Build your own Halloween sweet shop. Click to the button "Make sweet" to get your first sweets. When you have enough sweets, you can buy advertisement, worker, factory, robofactory or beltfactory to make tons of sweets. You can open your shop, when you have all of things to construct it. When you have build your shop, you can go to the next level to selling your sweets in your shop.<br>Have a lot of fun.</p>
+            <!--Work-->
+            <label>Your Sweets:</label>
+            <var id = userMoney>0</var><label> Sweets</label><br>
+            <label>Total production (Sweets/s):</label>
+            <var id = totalProduction>0</var><br>
+            <button id = "work" onclick="work()">Make sweet</button><br>
+            <label>Shop status:</label>
+            <var id = shopStatus>Is not open.</var><br>
+            <button id = "openShop" onclick="openShop()">Open shop</button>
+            <label>Price:</label>
+            <var id = launchCost>100000000 Sweets</var><br>
+            <!--Advertisement-->
+            <h3>Advertisement for workers:</h3>
+            <label>Number of advertisements:</label>
+            <var id = numAd>0</var><br>
+            <button id = "buyAd" onclick="buyAd()">Buy advertisement</button>
+            <label>Price:</label>
+            <var id = adCost>10</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = adProduction>0</var><br>
+            <!--Worker-->
+            <h3>Worker:</h3>
+            <label>Number of workers:</label>
+            <var id = numWorker>0</var><br>
+            <button id = "buyWorker" onclick="buyWorker()">Employ worker</button>
+            <label>Price:</label>
+            <var id = workerCost>100</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = workerProduction>0</var><br>
+            <!--Machine-->
+            <h3>Machine:</h3>
+            <label>Number of machines:</label>
+            <var id = numMachine>0</var><br>
+            <button id = "buyMachine" onclick="buyMachine()">Buy machine</button>
+            <label>Price:</label>
+            <var id = machineCost>1000</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = machineProduction>0</var><br>
+            <!--Factory-->
+            <h3>Factory:</h3>
+            <label>Number of factories:</label>
+            <var id = numFactory>0</var><br>
+            <button id = "buyFactory" onclick="buyFactory()">Buy factory</button>
+            <label>Price:</label>
+            <var id = factoryCost>10000</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = factoryProduction>0</var><br>
+            <!--Robofactory-->
+            <h3>Robofactory:</h3>
+            <label>Number of robofactories:</label>
+            <var id = numRobofactory>0</var><br>
+            <button id = "buyRobofactory" onclick="buyRobofactory()">Buy robofactory</button>
+            <label>Price:</label>
+            <var id = robofactoryCost>100000</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = robofactoryProduction>0</var><br>
+            <!--Beltfactory-->
+            <h3>Beltfactory:</h3>
+            <label>Number of beltfactories:</label>
+            <var id = numBeltfactory>0</var><br>
+            <button id = "buyBeltfactory" onclick="buyBeltfactory()">Buy beltfactory</button>
+            <label>Price:</label>
+            <var id = beltfactoryCost>1000000</var><label> Sweets</label><br>
+            <label>Produce (Sweets/s):</label>
+            <var id = beltfactoryProduction>0</var><br>
+            <!--Shop Construction-->
+            <h3>Shop construction:</h3>
+            <label>Necessary parts:</label><br>
+            <var id = shelves></var>
+            <var id = cashregister></var>
+            <var id = floors></var>
+            <var id = walls></var>
+            <var id = windows></var>
+            <var id = roof></var>
+            <var id = stock></var>
+            <var id = transport></var>
+            <button id = "buyShelves" onclick="buyShelves()">Buy shelves</button>
+            <label>Price:</label>
+            <var id = "shelvesPrice">10000000 Sweets</var><br>
+            <button id = "buyCashregister" onclick="buyCashregister()">Buy cash register</button>
+            <label>Price:</label>
+            <var id = "cashregisterPrice">15000000 Sweets</var><br>
+            <button id = "buyFloors" onclick="buyFloors()">Buy floors</button>
+            <label>Price:</label>
+            <var id = "floorsPrice">20000000 Sweets</var><br>
+            <button id = "buyWalls" onclick="buyWalls()">Buy walls</button>
+            <label>Price:</label>
+            <var id = "wallsPrice">25000000 Sweets</var><br>
+            <button id = "buyWindows" onclick="buyWindows()">Buy windows</button>
+            <label>Price:</label>
+            <var id = "windowsPrice">30000000 Sweets</var><br>
+            <button id = "buyRoof" onclick="buyRoof()">Buy roof</button>
+            <label>Price:</label>
+            <var id = "roofPrice">35000000 Sweets</var><br>
+            <button id = "buyStock" onclick="buyStock()">Buy stock</button>
+            <label>Price:</label>
+            <var id = "stockPrice">40000000 Sweets</var><br>
+            <button id = "buyTransport" onclick="buyTransport()">Buy transport</button>
+            <label>Price:</label>
+            <var id = "transportPrice">45000000 Sweets</var><br><br><br><br>
+            <div class="pumpkin">
+            <div class="face">
+                <div class="eyes">
+                 <span></span><span></span>
+                </div>
+                <div class="mouth"></div>
+                </div>
+            
+                <div class="hands">
+                  <span></span><span></span>
+                </div>
+            </div>
+            <button onclick="reset()">Reset current level</button>
+            <script src="shop.js"></script>
+            <footer>
+                <p>LAMBDA corporation, Copyright &copy; 2020</p>
+            </footer>
+        </div>
+    </body>
+</html>
